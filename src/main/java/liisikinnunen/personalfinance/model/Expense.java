@@ -3,12 +3,13 @@ package liisikinnunen.personalfinance.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Entity
 @Table(name = "expenses")
-public class Expense {
+public class Expense implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

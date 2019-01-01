@@ -3,6 +3,7 @@ package liisikinnunen.personalfinance.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,10 +11,10 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "ledgers")
-public class Ledger {
+public class Ledger implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ledger_id")
     private Long ledgerId;
 
