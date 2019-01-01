@@ -8,12 +8,12 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
-    private int userId;
+    private Long userId;
 
     @Column(name = "username")
     private String username;

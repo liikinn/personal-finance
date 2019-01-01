@@ -7,16 +7,16 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "income")
+@Table(name = "incomes")
 public class Income {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "income_id")
-    private int incomeId;
+    private Long incomeId;
 
     @Column(name = "type_id")
-    private int typeId;
+    private Long typeId;
 
     @Column(name = "amount")
     private double amount;
@@ -25,5 +25,5 @@ public class Income {
     private Date date;
 
     @Column(name = "ledger_id")
-    private int ledgerId;
+    private Long ledgerId;
 }

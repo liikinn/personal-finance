@@ -9,13 +9,13 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "ledger")
+@Table(name = "ledgers")
 public class Ledger {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ledger_id")
-    private int ledgerId;
+    private Long ledgerId;
 
     @Column(name = "title")
     private String title;
