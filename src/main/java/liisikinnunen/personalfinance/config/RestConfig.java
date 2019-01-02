@@ -17,6 +17,8 @@ import org.springframework.data.rest.webmvc.mapping.Associations;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
+import static liisikinnunen.personalfinance.util.PathAndRelMappings.API_BASE_PATH;
+
 @Configuration
 @EnableJpaRepositories(basePackages = "liisikinnunen.personalfinance.repository",
         repositoryBaseClass = ExtendedCrudRepositoryImpl.class)
@@ -29,7 +31,7 @@ public class RestConfig extends RepositoryRestConfigurerAdapter {
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.setBasePath("/");
+        config.setBasePath(API_BASE_PATH);
         config.exposeIdsFor(User.class);
         config.exposeIdsFor(Ledger.class);
         config.setRepositoryDetectionStrategy(RepositoryDetectionStrategy.RepositoryDetectionStrategies.ANNOTATED);
